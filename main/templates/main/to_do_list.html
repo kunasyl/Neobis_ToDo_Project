@@ -1,0 +1,12 @@
+<ul>
+    {% for i in all_items %} 
+    <li>
+        {% if i.is_complete %}
+            <input type="checkbox" id="is_complete" name="is_complete" checked />
+        {% else %}
+            <input type="checkbox" id="is_complete" name="is_complete" />
+        {% endif %}
+        {{i.title}}: {{i.text}}
+    </li>
+    {% endfor %}
+</ul> 
